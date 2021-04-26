@@ -1,0 +1,26 @@
+*{
+    margin-top: 0;
+}
+
+header{
+    min-height: 3em;
+    width: 100%;
+    background: var(--secondary-color);
+    background: -webkit-linear-gradient(right, var(--secondary-color), var(--mid-color));
+    background: -moz-linear-gradient(right, var(--secondary-color), var(--mid-color));
+    background: linear-gradient(to left, var(--secondary-color), var(--mid-color));
+    padding: .5em .5em;
+    box-sizing: border-box;
+}
+
+.header-title{
+    color: var(--ligth-color);
+    text-shadow: 3px 2px var(--shadow-color);
+    font-weight: 500;
+}
+
+@media (min-width:1024px) {
+    header{
+        padding: .5em 2em ;
+    }
+}

@@ -1,0 +1,28 @@
+footer{
+    height: 5em;
+    background: var(--mid-color);
+    background: -webkit-linear-gradient(right, var(--mid-color), var(--secondary-color));
+    background: -moz-linear-gradient(right, var(--mid-color), var(--secondary-color));
+    background: linear-gradient(to left, var(--mid-color), var(--secondary-color));
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    padding: .5em 1em;
+    box-sizing: border-box;
+    color: var(--ligth-color);
+}
+
+footer span{
+    display: inline-block;
+    padding-top: .75em;
+}
+
+footer span > a, footer span > a:visited{
+    color: var(--emphasis-color);
+}
+
+@media (min-width:1024px) {
+    footer{
+        padding: .5em 2em ;
+    }
+}

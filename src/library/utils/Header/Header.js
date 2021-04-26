@@ -1,10 +1,11 @@
 import React from 'react'
-import Title from '../Title/Title'
+import Title from '../../components/Title/Title'
+import './Header.css'
 
 export default function Header(props) {
     return (
         <header>
-            <Title title={ props.title } />
+            <Title title={ props.title } className="header-title"/>
         </header>
     )
 }

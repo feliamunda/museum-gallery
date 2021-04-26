@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 function Title(props) {
     return (
-        <h1>
+        <h1 className={ props.className }>
             { props.title }
         </h1> 
     )
