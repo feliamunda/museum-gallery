@@ -3,8 +3,6 @@
 }
 
 header{
-    min-height: 3em;
-    width: 100%;
     background: var(--secondary-color);
     background: -webkit-linear-gradient(right, var(--secondary-color), var(--mid-color));
     background: -moz-linear-gradient(right, var(--secondary-color), var(--mid-color));
@@ -21,6 +19,6 @@ header{
 
 @media (min-width:1024px) {
     header{
-        padding: .5em 2em ;
+        padding: 1em 2em ;
     }
 }
