@@ -1,16 +1,25 @@
 import React from 'react'
 import { useState ,useEffect } from 'react'
 import Frame from '../Frame/Frame'
+import {apiKey} from '../../../conf/conf'
 import './Gallery.css'
 
-export default function Gallery() {
+/**
+ * Gallery Component
+ * @const resourceType Should Stay as image to manage the request
+ * @const isRandom If the images should be load Random
+ * @const artLibrary (State) contain all the resouces loaded
+ * @const nextPage (State) Contain the next page to be loaded from api
+ * @const isNearFinalScroll (State) It Manage if the scroll is ending to make a new request for Api
+ * @returns JSX Component
+ */
+export default function Gallery(props) {
     const resourceType = "image";
-    const conf = require('../../../conf/conf')
-    const apiKey = conf.apiKey
-    const isRandom = false;
+    const isRandom = props.isRandom? props.isRandom : false;
     const [artLibrary, setArtLibrary] = useState([])
     const [nextPage, setNextPage] = useState("")
     const [isNearFinalScroll, setIsNearFinalScroll] = useState(false)
+    
     useEffect(() => {
         getImages()
     }, [ isNearFinalScroll ])
@@ -20,14 +29,15 @@ export default function Gallery() {
         let url = nextPage
         if (nextPage === "")
             url = `https://api.harvardartmuseums.org/${resourceType}?apikey=${apiKey}${isRandom?'&sort=random':''}`
-       
+        
         fetch(url)
             .then(response => response.json())
             .then(data => {
                 setNextPage(data.info.next)
                 setIsNearFinalScroll(false)
                 setArtLibrary(artLibrary.concat(data.records))
-            });
+            })
+            .catch(error=> console.log('Error whiling consulting Api'));
     }
 
     const renderArtLibrary = ()=>{

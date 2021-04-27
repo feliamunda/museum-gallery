@@ -1,11 +1,11 @@
 import { create } from 'react-test-renderer';
-import App from './App';
+import Title from './Title';
 
 let component;
 
-describe('<App />', () => {
+describe('<Title />', () => {
     beforeAll(()=>{
-        component = create(<App/>);
+        component = create(<Title/>);
     });
 
     it("Render Ok", ()=>{

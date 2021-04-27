@@ -1,6 +1,11 @@
 import React from 'react'
 import './Footer.css'
 
+/**
+ * Footer Component
+ * 
+ * @returns JSX Component 
+ */
 export default function Footer() {
     return (
         <footer>

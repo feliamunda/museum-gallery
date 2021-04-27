@@ -4,7 +4,13 @@ import Footer from '../library/utils/Footer/Footer'
 import Header from '../library/utils/Header/Header'
 import './MainScreen.css'
 
-export default function Main() {
+/**
+ * MainScreen Component
+ * 
+ * @returns JSX Component 
+ */
+
+export default function MainScreen() {
     return (
         <div className="main-container">
             <Header title="Museum Gallery"/> 

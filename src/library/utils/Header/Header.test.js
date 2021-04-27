@@ -1,13 +1,12 @@
 import { create } from 'react-test-renderer';
-import App from './App';
+import Header from './Header';
 
 let component;
 
-describe('<App />', () => {
+describe('<Header />', () => {
     beforeAll(()=>{
-        component = create(<App/>);
+        component = create(<Header/>);
     });
-
     it("Render Ok", ()=>{
         expect(component).toBeDefined()
     });
