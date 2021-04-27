@@ -1,70 +1,116 @@
-# Getting Started with Create React App
+<div align="center" id="top"> 
+  <img src="./.github/app.gif" alt="Museum Gallery" />
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+  &#xa0;
+</div>
 
-## Available Scripts
+<h1 align="center">Museum Gallery</h1>
 
-In the project directory, you can run:
+<p align="center">
+  <img alt="Github Lenguaje mas utilizado" src="https://img.shields.io/github/languages/top/feliamunda/museum-gallery?color=56BEB8">
 
-### `npm start`
+  <img alt="Github numero de lenguajes utilizados" src="https://img.shields.io/github/languages/count/feliamunda/museum-gallery?color=56BEB8">
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+  <img alt="Tamano del repo" src="https://img.shields.io/github/repo-size/feliamunda/museum-gallery?color=56BEB8">
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+  <img alt="Licencia" src="https://img.shields.io/github/license/feliamunda/museum-gallery?color=56BEB8">
+</p>
 
-### `npm test`
+<p align="center">
+  <a href="#dart-about">Acerca de</a> &#xa0; | &#xa0; 
+  <a href="#sparkles-features">Características</a> &#xa0; | &#xa0;
+  <a href="#rocket-technologies">Tecnologias</a> &#xa0; | &#xa0;
+  <a href="#white_check_mark-requirements">Requerimientos</a> &#xa0; | &#xa0;
+  <a href="#checkered_flag-starting">Empezar</a> &#xa0; | &#xa0;
+  <a href="#memo-license">Licencia</a> &#xa0; | &#xa0;
+  <a href="https://github.com/feliamunda" target="_blank">Autor</a>
+</p>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<br>
 
-### `npm run build`
+## :dart: Acerca de ##
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Esta App de react consume la API de Hardvard Museums para mostrar en una interfaz responsiva las diferentes obras de arte y piezas de los museos de Hardvard.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Principal Problema / Solución
+- Estandarizar y jugar con el tamaño de las imagenes para que no se superpongan y mantengan un tamaño uniforme en todos los dispositivos sin alterar su proporcion orginal
+- La solución fue agregar una condición cuando se lee la imagen en la respuesta de la API para que agregue o no una clase CSS que cambia la manera en que se muestra cada imagen dependiendo si su proporcion es mayor por el ancho o por el alto.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Arquitectura
+La arquitectura elegida al trabajar con [React](https://pt-br.reactjs.org/) fue la orientada a componentes, en este caso haciendo uso de componentes funcionales, ya que al trabajar con componentes aporta modularidad y flexibilidad a la aplicacion a la vez que permite pensar en la escalabilidad de forma progresiva, al ser una aplicacion muy sencilla en su version inicial se deja la posibilidad de añadir y expandir funcionalidades.
 
-### `npm run eject`
+### Trade-offs
+La implementación inicial es funcional sin embargo tiene muchos campos de mejora:
+- Implementación de un loader para mejorar la experiencia de usuario.
+- Implementar un Lazy Load para los componentes Frame.
+- Completar las pruebas unitarias a un 100% de cobertura (Actualmente el componente Gallery se encuentra en 83.33% en la sección *Branches*).
+- Optimizar las peticiones de la api condicionando las peticiones a si no se encuentran almacenandas en un storage local de páginas ya cargadas en la memoria para no sobrecargar las peticiones.
+- Mejorar Diseño (Diseñar UI)
+- Añadir animaciones a los Frames.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### [Código orgullo](https://github.com/feliamunda/museum-gallery/blob/master/src/library/components/Gallery/Gallery.js)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### [Producción](https://feliamunda.github.io/museum-gallery/)
+## :sparkles: Caracteristicas ##
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+:heavy_check_mark: Scroll Infinito\
+:heavy_check_mark: Responsivo\
+:heavy_check_mark: Escalable
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## :rocket: Tecnologías ##
 
-## Learn More
+Las siguientes tecnologias fueron usadas en este proyecto:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- [Node.js](https://nodejs.org/en/)
+- [React](https://pt-br.reactjs.org/)
+- [Create React App](https://facebook.github.io/create-react-app/docs/getting-started)
+- [JavaScript](https://developer.mozilla.org/es/docs/Web/JavaScript)
+- [CSS](https://www.w3schools.com/css/)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## :white_check_mark: Requerimientos ##
 
-### Code Splitting
+Antes de empezar :checkered_flag:, necesitas tener [Git](https://git-scm.com) y [Node](https://nodejs.org/en/) instalados.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Y definir en tu sistema o ambiente las variables de entorno requeridas
+### *Variable de entorno requerida*
+REACT_APP_HARDVARD_MUSEUM_APIKEY *
 
-### Analyzing the Bundle Size
+## :checkered_flag: Empezar ##
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```bash
+# Clona el projecto
+$ git clone https://github.com/feliamunda/museum-gallery
 
-### Making a Progressive Web App
+# Accede
+$ cd museum-gallery
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+# Instala dependencias 
+$ npm install
 
-### Advanced Configuration
+###OPCIONES###
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+# 1- Corre el projecto
+$ npm start
+# El servidor se inicializa en <http://localhost:3000>
 
-### Deployment
+# 2- Construye el projecto
+$ npm run build
+# Servir el directorio con el servidor web de su preferencia
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+# 3- Corre Pruebas con cobertura activada
+$ npm test
 
-### `npm run build` fails to minify
+##############
+# Ctrl+C para salir de los procesos de servidor de prueba y testing
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## :memo: Licencia ##
+
+Este Proyecto esta bajo la licencia [GPL](LICENSE.md).
+
+
+Hecho con el :heart: por <a href="https://github.com/feliamunda" target="_blank">Felicie Amundaray</a>
+
+&#xa0;
+
+<a href="#top">Volver arriba</a>
