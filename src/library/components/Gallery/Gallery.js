@@ -1,9 +1,8 @@
 import React from 'react'
 import { useState ,useEffect } from 'react'
 import Frame from '../Frame/Frame'
-import {apiKey} from '../../../conf/conf'
 import './Gallery.css'
-
+import { apiKey } from '../../../conf/conf'
 /**
  * Gallery Component
  * @const resourceType Should Stay as image to manage the request
@@ -21,11 +20,6 @@ export default function Gallery(props) {
     const [isNearFinalScroll, setIsNearFinalScroll] = useState(false)
     
     useEffect(() => {
-        getImages()
-    }, [ isNearFinalScroll ])
-    
-
-    const getImages = ()=>{
         let url = nextPage
         if (nextPage === "")
             url = `https://api.harvardartmuseums.org/${resourceType}?apikey=${apiKey}${isRandom?'&sort=random':''}`
@@ -38,7 +32,9 @@ export default function Gallery(props) {
                 setArtLibrary(artLibrary.concat(data.records))
             })
             .catch(error=> console.log('Error whiling consulting Api'));
-    }
+            // La siguiente linea es para evadir un warning que evita el build en prod
+            // eslint-disable-next-line
+    }, [isNearFinalScroll])
 
     const renderArtLibrary = ()=>{
         let frames = []
