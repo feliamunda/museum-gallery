@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/museum-gallery/static/css/main.a6839c06.chunk.css",
+    "main.js": "/museum-gallery/static/js/main.70b41e83.chunk.js",
+    "main.js.map": "/museum-gallery/static/js/main.70b41e83.chunk.js.map",
+    "runtime-main.js": "/museum-gallery/static/js/runtime-main.4033a568.js",
+    "runtime-main.js.map": "/museum-gallery/static/js/runtime-main.4033a568.js.map",
+    "static/js/2.969f98b6.chunk.js": "/museum-gallery/static/js/2.969f98b6.chunk.js",
+    "static/js/2.969f98b6.chunk.js.map": "/museum-gallery/static/js/2.969f98b6.chunk.js.map",
+    "static/js/3.4665f6c8.chunk.js": "/museum-gallery/static/js/3.4665f6c8.chunk.js",
+    "static/js/3.4665f6c8.chunk.js.map": "/museum-gallery/static/js/3.4665f6c8.chunk.js.map",
+    "index.html": "/museum-gallery/index.html",
+    "static/css/main.a6839c06.chunk.css.map": "/museum-gallery/static/css/main.a6839c06.chunk.css.map",
+    "static/js/2.969f98b6.chunk.js.LICENSE.txt": "/museum-gallery/static/js/2.969f98b6.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.4033a568.js",
+    "static/js/2.969f98b6.chunk.js",
+    "static/css/main.a6839c06.chunk.css",
+    "static/js/main.70b41e83.chunk.js"
+  ]
+}
